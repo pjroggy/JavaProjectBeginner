@@ -1,26 +1,24 @@
 import java.util.Scanner;
 
 public class FahrenheitCelsiusConverter {
-    public static double celsiusToFahrenheit(double celsius){
-        return (celsius*9/5)+32;
+    private static double celsiusToFahrenheit(double celsius) {
+        return (celsius * 9 / 5) + 32;
     }
-    public static double fahrenheitToCelsius(double fahrenheit){
-        return (fahrenheit-32)*5/9;
+
+    private static double fahrenheitToCelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
     }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Entrez la température en °C :");
-        double temperatureCelsius = scanner.nextDouble();
-
-        double conversionCelToFahr = celsiusToFahrenheit(temperatureCelsius);
-        System.out.println("Egal à : " + conversionCelToFahr + " °F");
+        double temperatureCelsiue = scanner.nextDouble();
+        System.out.println("Egal à : " + celsiusToFahrenheit(temperatureCelsiue) + " °F");
 
         System.out.println("Entrez la température en °F :");
         double temperatureFahrenheit = scanner.nextDouble();
-
-        double conversionFahrToCal = fahrenheitToCelsius(temperatureFahrenheit);
-        System.out.println("Egal à : " + conversionFahrToCal + " °C");
+        System.out.println("Egal à : " + fahrenheitToCelsius(temperatureFahrenheit) + " °C");
     }
 }
